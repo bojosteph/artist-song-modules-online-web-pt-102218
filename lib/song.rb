@@ -2,7 +2,7 @@ require 'pry'
 
 class Song
   extend Memorable::ClassMethods
-  
+  extend Memorabel::InstanceMethods
   extend Findable
   include Paramable
   attr_accessor :name
@@ -11,7 +11,7 @@ class Song
   @@songs = []
 
   def initialize
-    @@songs << self
+    super
   end
 
   
